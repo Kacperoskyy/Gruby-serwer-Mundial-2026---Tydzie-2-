@@ -9,23 +9,42 @@
             --bg: #0b0e14;
             --surface: #151921;
             --primary: #00ff87;
+            --secondary: #00bfff;
             --text: #e6edf3;
             --dim: #8b949e;
             --border: #2d333b;
         }
         * { box-sizing: border-box; }
-        body { background-color: var(--bg); color: var(--text); font-family: 'Inter', -apple-system, sans-serif; padding: 40px 20px; display: flex; flex-direction: column; align-items: center; }
+        body { background-color: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; padding: 40px 20px; display: flex; flex-direction: column; align-items: center; }
         
         header { margin-bottom: 40px; text-align: center; }
-        h1 { font-size: 1.8rem; color: #fff; margin-bottom: 8px; }
-        h1 span { color: var(--primary); }
-        .sub-header { font-size: 1.1rem; color: var(--dim); font-weight: 500; }
+        
+        /* Styl napisu - gradient */
+        h1 { 
+            font-size: 2.2rem; 
+            margin-bottom: 8px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+        
+        .sub-header { 
+            font-size: 1.2rem; 
+            color: var(--text); 
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid var(--primary);
+            display: inline-block;
+        }
         
         .container { width: 100%; max-width: 900px; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); overflow-x: auto; }
         table { width: 100%; border-collapse: separate; border-spacing: 0; }
         th { color: var(--dim); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; padding: 16px; border-bottom: 1px solid var(--border); }
         td { padding: 16px; border-bottom: 1px solid var(--border); text-align: center; color: var(--text); }
-        tr:last-child td { border-bottom: none; }
         tr:hover { background: rgba(255, 255, 255, 0.03); }
         
         .pos { color: var(--dim); font-weight: 600; }
@@ -49,6 +68,7 @@
                 </tr>
             </thead>
             <tbody>
+                <!-- 11 wierszy -->
                 <tr><td class="pos">1</td><td class="name">---</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="xp">0</td></tr>
                 <tr><td class="pos">2</td><td class="name">---</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="xp">0</td></tr>
                 <tr><td class="pos">3</td><td class="name">---</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="xp">0</td></tr>
