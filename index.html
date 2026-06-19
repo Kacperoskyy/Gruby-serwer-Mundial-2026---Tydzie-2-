@@ -8,55 +8,37 @@
         :root {
             --bg: #0b0e14;
             --surface: #151921;
-            --primary: #00ff87;
-            --secondary: #00bfff;
+            /* Złota paleta */
+            --gold-start: #f1c40f;
+            --gold-end: #d35400;
             --text: #e6edf3;
             --dim: #8b949e;
-            --border: #2d333b;
+            --border: #3b3117;
         }
-        * { box-sizing: border-box; }
         body { background-color: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; padding: 40px 20px; display: flex; flex-direction: column; align-items: center; }
         
-        header { margin-bottom: 40px; text-align: center; }
+        header { margin-bottom: 30px; text-align: center; }
+        h1 { font-size: 2.2rem; margin-bottom: 8px; background: linear-gradient(90deg, var(--gold-start), #fff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800; }
+        .sub-header { font-size: 1.1rem; color: var(--gold-start); text-transform: uppercase; letter-spacing: 3px; padding: 5px 15px; border: 1px solid var(--gold-start); border-radius: 20px; display: inline-block; }
         
-        /* Styl napisu - gradient */
-        h1 { 
-            font-size: 2.2rem; 
-            margin-bottom: 8px;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: 800;
-            letter-spacing: -1px;
-        }
+        .container { width: 100%; max-width: 800px; background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 30px; box-shadow: 0 10px 40px rgba(241, 196, 15, 0.1); }
+        table { width: 100%; border-collapse: collapse; }
+        th { color: var(--gold-start); font-size: 0.75rem; text-transform: uppercase; padding: 15px; border-bottom: 2px solid var(--gold-start); }
+        td { padding: 15px; border-bottom: 1px solid var(--border); text-align: center; }
+        tr:hover { background: rgba(241, 196, 15, 0.05); }
         
-        .sub-header { 
-            font-size: 1.2rem; 
-            color: var(--text); 
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            padding-bottom: 5px;
-            border-bottom: 2px solid var(--primary);
-            display: inline-block;
-        }
+        .name { text-align: left; font-weight: 600; color: #fff; }
+        .xp { font-weight: 800; color: var(--gold-start); }
+        .total { color: #fff; font-weight: 900; background: linear-gradient(to right, var(--gold-start), var(--gold-end)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         
-        .container { width: 100%; max-width: 900px; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); overflow-x: auto; }
-        table { width: 100%; border-collapse: separate; border-spacing: 0; }
-        th { color: var(--dim); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; padding: 16px; border-bottom: 1px solid var(--border); }
-        td { padding: 16px; border-bottom: 1px solid var(--border); text-align: center; color: var(--text); }
-        tr:hover { background: rgba(255, 255, 255, 0.03); }
-        
-        .pos { color: var(--dim); font-weight: 600; }
-        .name { text-align: left; font-weight: 500; color: var(--dim); font-style: italic; }
-        .xp { font-weight: 700; color: var(--primary); }
+        footer { margin-top: 30px; color: var(--dim); font-size: 0.85rem; text-align: center; font-style: italic; }
     </style>
 </head>
 <body>
 
     <header>
         <h1>Gruby Serwer Mundial 2026</h1>
-        <div class="sub-header">Tydzień 2</div>
+        <div class="sub-header">Tydzień 2 - Złota Tabela</div>
     </header>
 
     <div class="container">
@@ -68,21 +50,23 @@
                 </tr>
             </thead>
             <tbody>
-                <!-- 11 wierszy -->
-                <tr><td class="pos">1</td><td class="name">---</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="xp">0</td></tr>
-                <tr><td class="pos">2</td><td class="name">---</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="xp">0</td></tr>
-                <tr><td class="pos">3</td><td class="name">---</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="xp">0</td></tr>
-                <tr><td class="pos">4</td><td class="name">---</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="xp">0</td></tr>
-                <tr><td class="pos">5</td><td class="name">---</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="xp">0</td></tr>
-                <tr><td class="pos">6</td><td class="name">---</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="xp">0</td></tr>
-                <tr><td class="pos">7</td><td class="name">---</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="xp">0</td></tr>
-                <tr><td class="pos">8</td><td class="name">---</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="xp">0</td></tr>
-                <tr><td class="pos">9</td><td class="name">---</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="xp">0</td></tr>
-                <tr><td class="pos">10</td><td class="name">---</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="xp">0</td></tr>
-                <tr><td class="pos">11</td><td class="name">---</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="xp">0</td></tr>
+                <tr><td>1</td><td class="name">Orzeł</td><td class="xp">200</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="total">200</td></tr>
+                <tr><td>2</td><td class="name">Tonia</td><td class="xp">200</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="total">200</td></tr>
+                <tr><td>3</td><td class="name">Pandusia</td><td class="xp">200</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="total">200</td></tr>
+                <tr><td>4</td><td class="name">Ketchup</td><td class="xp">150</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="total">150</td></tr>
+                <tr><td>5</td><td class="name">Kasti</td><td class="xp">150</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="total">150</td></tr>
+                <tr><td>6</td><td class="name">Mr. Patrick</td><td class="xp">150</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="total">150</td></tr>
+                <tr><td>7</td><td class="name">Michu</td><td class="xp">150</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="total">150</td></tr>
+                <tr><td>8</td><td class="name">Mineblack</td><td class="xp">150</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="total">150</td></tr>
+                <tr><td>9</td><td class="name">Symciu</td><td class="xp">100</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="total">100</td></tr>
+                <tr><td>10</td><td class="name">Kacperoskyy</td><td class="xp">100</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="total">100</td></tr>
             </tbody>
         </table>
     </div>
+
+    <footer>
+        "Złoto jest dla zwycięzców" | Aktualizacja: 19.06.2026 ⚽
+    </footer>
 
 </body>
 </html>
