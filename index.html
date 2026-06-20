@@ -9,8 +9,6 @@
             --bg: #0b0e14;
             --surface: #151921;
             --gold: #f1c40f;
-            --silver: #bdc3c7;
-            --bronze: #cd7f32;
             --text: #e6edf3;
             --border: #3b3117;
         }
@@ -19,21 +17,23 @@
         header { margin-bottom: 30px; text-align: center; }
         h1 { font-size: 2.2rem; margin-bottom: 10px; background: linear-gradient(90deg, var(--gold), #fff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800; }
         
-        /* Podium Section */
         .podium { display: flex; justify-content: center; gap: 20px; margin-bottom: 40px; width: 100%; max-width: 600px; }
-        .podium-card { background: var(--surface); border: 1px solid var(--border); padding: 15px; border-radius: 12px; text-align: center; width: 100px; }
-        .podium-card.gold { border-top: 4px solid var(--gold); }
-        .rank { font-size: 0.8rem; font-weight: bold; color: var(--gold); margin-bottom: 5px; }
+        .podium-card { background: var(--surface); border: 1px solid var(--border); padding: 15px; border-radius: 12px; text-align: center; width: 110px; }
+        .podium-card.gold { border-top: 4px solid var(--gold); box-shadow: 0 0 15px rgba(241, 196, 15, 0.2); }
+        .rank { font-size: 0.7rem; font-weight: bold; color: var(--gold); margin-bottom: 5px; }
         .podium-name { font-weight: bold; font-size: 0.9rem; }
+        .podium-xp { color: var(--gold); font-size: 0.8rem; }
 
-        .container { width: 100%; max-width: 800px; background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.5); }
+        .container { width: 100%; max-width: 850px; background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.5); }
         table { width: 100%; border-collapse: collapse; }
         th { color: var(--gold); font-size: 0.75rem; text-transform: uppercase; padding: 15px; border-bottom: 2px solid var(--gold); }
         td { padding: 15px; border-bottom: 1px solid #21262d; text-align: center; }
         .name { text-align: left; font-weight: 600; }
         .total { color: var(--gold); font-weight: 900; }
         
-        footer { margin-top: 30px; color: #8b949e; font-size: 0.8rem; text-align: center; }
+        footer { margin-top: 40px; text-align: center; }
+        .quote { color: var(--gold); font-size: 1.2rem; font-weight: bold; font-style: italic; margin-bottom: 10px; }
+        .sub-quote { color: #8b949e; font-size: 0.9rem; }
     </style>
 </head>
 <body>
@@ -45,15 +45,18 @@
     <div class="podium">
         <div class="podium-card">
             <div class="rank">2. MIEJSCE</div>
-            <div class="podium-name">Tonia</div>
+            <div class="podium-name">Pandusia</div>
+            <div class="podium-xp">350 XP</div>
         </div>
         <div class="podium-card gold">
             <div class="rank">1. MIEJSCE</div>
             <div class="podium-name">Orzeł</div>
+            <div class="podium-xp">350 XP</div>
         </div>
         <div class="podium-card">
             <div class="rank">3. MIEJSCE</div>
-            <div class="podium-name">Pandusia</div>
+            <div class="podium-name">Kacperoskyy</div>
+            <div class="podium-xp">300 XP</div>
         </div>
     </div>
 
@@ -66,22 +69,24 @@
                 </tr>
             </thead>
             <tbody>
-                <tr><td>1</td><td class="name">Orzeł</td><td class="total">200</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="total">200</td></tr>
-                <tr><td>2</td><td class="name">Tonia</td><td class="total">200</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="total">200</td></tr>
-                <tr><td>3</td><td class="name">Pandusia</td><td class="total">200</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="total">200</td></tr>
-                <tr><td>4</td><td class="name">Ketchup</td><td>150</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="total">150</td></tr>
-                <tr><td>5</td><td class="name">Kasti</td><td>150</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="total">150</td></tr>
-                <tr><td>6</td><td class="name">Mr. Patrick</td><td>150</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="total">150</td></tr>
-                <tr><td>7</td><td class="name">Michu</td><td>150</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="total">150</td></tr>
-                <tr><td>8</td><td class="name">Mineblack</td><td>150</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="total">150</td></tr>
-                <tr><td>9</td><td class="name">Symciu</td><td>100</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="total">100</td></tr>
-                <tr><td>10</td><td class="name">Kacperoskyy</td><td>100</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="total">100</td></tr>
+                <tr><td>1</td><td class="name">Orzeł</td><td>200</td><td>150</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="total">350</td></tr>
+                <tr><td>1</td><td class="name">Pandusia</td><td>200</td><td>150</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="total">350</td></tr>
+                <tr><td>3</td><td class="name">Kacperoskyy</td><td>100</td><td>200</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="total">300</td></tr>
+                <tr><td>3</td><td class="name">Mr. Patrick</td><td>150</td><td>150</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="total">300</td></tr>
+                <tr><td>5</td><td class="name">Tonia</td><td>200</td><td>50</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="total">250</td></tr>
+                <tr><td>5</td><td class="name">Kasti</td><td>150</td><td>100</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="total">250</td></tr>
+                <tr><td>5</td><td class="name">Michu</td><td>150</td><td>100</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="total">250</td></tr>
+                <tr><td>5</td><td class="name">Symciu</td><td>100</td><td>150</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="total">250</td></tr>
+                <tr><td>9</td><td class="name">Grubcio</td><td>0</td><td>200</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="total">200</td></tr>
+                <tr><td>10</td><td class="name">Ketchup</td><td>150</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="total">150</td></tr>
+                <tr><td>10</td><td class="name">Mineblack</td><td>150</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="total">150</td></tr>
             </tbody>
         </table>
     </div>
 
     <footer>
-        "Nie liczy się start, liczy się meta." | Tydzień 2 - Sezon Mundial 2026 ⚽
+        <div class="quote">"Ranking nie kłamie – tutaj każdy punkt jest wywalczony w pocie czoła!"</div>
+        <div class="sub-quote">Dzień 2 zamknięty. Czy Dzień 3 wywróci tabelę do góry nogami? ⚽</div>
     </footer>
 
 </body>
